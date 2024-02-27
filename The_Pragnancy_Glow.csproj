@@ -1,0 +1,358 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90F45B24-24FA-4B79-AD0D-B293B083AC24}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital_management_System</RootNamespace>
+    <AssemblyName>Hospital_management_System</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44306</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Lukky.mdf" />
+    <Content Include="App_Data\Lukky_log.ldf">
+      <DependentUpon>Lukky.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Test.mdf" />
+    <Content Include="App_Data\Test_log.ldf">
+      <DependentUpon>Test.mdf</DependentUpon>
+    </Content>
+    <Content Include="Users\1stTrimester.aspx" />
+    <Content Include="Users\Admin.aspx" />
+    <Content Include="Users\AppontView.aspx" />
+    <Content Include="Users\Contactview.aspx" />
+    <Content Include="Users\css\bootstrap.css" />
+    <Content Include="Users\css\chocolat.css" />
+    <Content Include="Users\css\flexslider.css" />
+    <Content Include="Users\css\font-awesome.css" />
+    <Content Include="Users\css\fontawesome-all.min.css" />
+    <Content Include="Users\css\jquery-ui.css" />
+    <Content Include="Users\css\minimal-slider.css" />
+    <Content Include="Users\css\style.css" />
+    <Content Include="Users\Dashboard.aspx" />
+    <Content Include="Users\fonts\fontawesome-webfont.svg" />
+    <Content Include="Users\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Users\images\1.jpg" />
+    <Content Include="Users\images\10.jpg" />
+    <Content Include="Users\images\2.jpg" />
+    <Content Include="Users\images\3.jpg" />
+    <Content Include="Users\images\4.jpg" />
+    <Content Include="Users\images\5.jpg" />
+    <Content Include="Users\images\6.jpg" />
+    <Content Include="Users\images\7.jpg" />
+    <Content Include="Users\images\8.jpg" />
+    <Content Include="Users\images\9.jpg" />
+    <Content Include="Users\images\a1.jpg" />
+    <Content Include="Users\images\a2.jpg" />
+    <Content Include="Users\images\a3.jpg" />
+    <Content Include="Users\images\a4.jpg" />
+    <Content Include="Users\images\ab.jpg" />
+    <Content Include="Users\images\arrow.png" />
+    <Content Include="Users\images\banner1.jpg" />
+    <Content Include="Users\images\banner2.jpg" />
+    <Content Include="Users\images\bg1.jpg" />
+    <Content Include="Users\images\bg2.jpg" />
+    <Content Include="Users\images\bg3.jpg" />
+    <Content Include="Users\images\bg4.jpg" />
+    <Content Include="Users\images\c1.png" />
+    <Content Include="Users\images\c2.png" />
+    <Content Include="Users\images\c3.png" />
+    <Content Include="Users\images\cal.png" />
+    <Content Include="Users\images\cal1.png" />
+    <Content Include="Users\images\close.png" />
+    <Content Include="Users\images\g1.jpg" />
+    <Content Include="Users\images\g2.jpg" />
+    <Content Include="Users\images\g3.jpg" />
+    <Content Include="Users\images\g4.jpg" />
+    <Content Include="Users\images\g5.jpg" />
+    <Content Include="Users\images\g6.jpg" />
+    <Content Include="Users\images\g7.jpg" />
+    <Content Include="Users\images\g8.jpg" />
+    <Content Include="Users\images\g9.jpg" />
+    <Content Include="Users\images\left.png" />
+    <Content Include="Users\images\move-top.png" />
+    <Content Include="Users\images\overlay.png" />
+    <Content Include="Users\images\right.png" />
+    <Content Include="Users\images\t1.jpg" />
+    <Content Include="Users\images\t2.jpg" />
+    <Content Include="Users\images\t3.jpg" />
+    <Content Include="Users\images\te1.jpg" />
+    <Content Include="Users\images\te2.jpg" />
+    <Content Include="Users\images\te3.jpg" />
+    <Content Include="Users\js\bars.js" />
+    <Content Include="Users\js\bootstrap.js" />
+    <Content Include="Users\js\counterup.min.js" />
+    <Content Include="Users\js\easing.js" />
+    <Content Include="Users\js\jquery-2.1.4.min.js" />
+    <Content Include="Users\js\jquery-2.2.3.min.js" />
+    <Content Include="Users\js\jquery-ui.js" />
+    <Content Include="Users\js\jquery.chocolat.js" />
+    <Content Include="Users\js\jquery.flexslider.js" />
+    <Content Include="Users\js\jquery.vide.min.js" />
+    <Content Include="Users\js\minimal-slider.js" />
+    <Content Include="Users\js\move-top.js" />
+    <Content Include="Users\js\responsiveslides.min.js" />
+    <Content Include="Users\js\SmoothScroll.min.js" />
+    <Content Include="Users\js\waypoints.min.js" />
+    <Content Include="Users\Patient.aspx" />
+    <Content Include="Users\Patientview.aspx" />
+    <Content Include="Users\Registration.aspx" />
+    <Content Include="Users\Info1.aspx" />
+    <Content Include="Users\usermaster.Master" />
+    <Content Include="Users\fonts\fontawesome-webfont.eot" />
+    <Content Include="Users\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Users\fonts\fontawesome-webfont.woff" />
+    <Content Include="Users\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Users\fonts\FontAwesome.otf" />
+    <Content Include="Users\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Users\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Users\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Users\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Users\images\Thumbs.db" />
+    <Content Include="Users\webfonts\fa-brands-400.woff" />
+    <Content Include="Users\webfonts\fa-brands-400.woff2" />
+    <Content Include="Users\webfonts\fa-regular-400.eot" />
+    <Content Include="Users\webfonts\fa-regular-400.ttf" />
+    <Content Include="Users\webfonts\fa-regular-400.woff" />
+    <Content Include="Users\webfonts\fa-regular-400.woff2" />
+    <Content Include="Users\webfonts\fa-solid-900.eot" />
+    <Content Include="Users\webfonts\fa-solid-900.ttf" />
+    <Content Include="Users\webfonts\fa-solid-900.woff" />
+    <Content Include="Users\webfonts\fa-solid-900.woff2" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Users\Loginpage.aspx" />
+    <Content Include="Users\Appointment.aspx" />
+    <Content Include="Users\Home.aspx" />
+    <Content Include="Users\video\farm.jpg" />
+    <Content Include="Users\video\farm.mp4" />
+    <Content Include="Users\Contact.aspx" />
+    <Content Include="Users\About.aspx" />
+    <Content Include="Users\Forgotpassword.aspx" />
+    <Content Include="Users\Gallery.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\1stTrimester.aspx.cs">
+      <DependentUpon>1stTrimester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\1stTrimester.aspx.designer.cs">
+      <DependentUpon>1stTrimester.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\AppontView.aspx.cs">
+      <DependentUpon>AppontView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\AppontView.aspx.designer.cs">
+      <DependentUpon>AppontView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Contactview.aspx.cs">
+      <DependentUpon>Contactview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Contactview.aspx.designer.cs">
+      <DependentUpon>Contactview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Patient.aspx.cs">
+      <DependentUpon>Patient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Patient.aspx.designer.cs">
+      <DependentUpon>Patient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Patientview.aspx.cs">
+      <DependentUpon>Patientview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Patientview.aspx.designer.cs">
+      <DependentUpon>Patientview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Info1.aspx.cs">
+      <DependentUpon>Info1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Info1.aspx.designer.cs">
+      <DependentUpon>Info1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\usermaster.Master.cs">
+      <DependentUpon>usermaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\usermaster.Master.designer.cs">
+      <DependentUpon>usermaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Loginpage.aspx.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Loginpage.aspx.designer.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Forgotpassword.aspx.cs">
+      <DependentUpon>Forgotpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Forgotpassword.aspx.designer.cs">
+      <DependentUpon>Forgotpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61995</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44306/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
